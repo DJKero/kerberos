@@ -38,11 +38,11 @@ modules:
         scope: system
         # If no repo information is specified, Flathub will be used by default
         install: # system flatpaks we want all users to have and not remove
-          org.keepassxc.KeePassXC
-          app.zen_browser.zen
-          org.libreoffice.LibreOffice
-          dev.vencord.Vesktop
-          com.heroicgameslauncher.hgl
+          - org.keepassxc.KeePassXC
+          - app.zen_browser.zen
+          - org.libreoffice.LibreOffice
+          - dev.vencord.Vesktop
+          - com.heroicgameslauncher.hgl
           #- org.mozilla.firefox
           #- org.gnome.Loupe
       - scope: user # Also add Flathub user repo, but no user packages
