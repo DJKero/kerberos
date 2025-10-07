@@ -16,19 +16,44 @@ modules:
     files:
       - source: system
         destination: / # copies files/system/* (* means everything inside it) into your image's root folder /
-
+  
+  - type: script
+    scripts:
+      - vscode.sh # example: run files/scripts/myscript.sh
+  
   - type: dnf
     # repos:
     #   copr:
     #     - atim/starship
-    # install:
-    #   packages:
-    #     - micro
-    #     - starship
+    install:
+      packages:
+        - clang
+        - code
+        - golang
+        # - libasan
+        # - libogg-devel
+        # - libusb-compat-0.1
+        - lld
+        - lldb
+        - llvm
+        - llvm-devel
+        # - mesa-libGLU
+        # - nodejs
+        - oh-my-posh
+        - postgresql-server
+        # - qt-creator
+        # - qt5-*-devel
+        - SDL3-devel
+        - SDL3-image-devel
+        - SDL3-mixer-devel
+        - SDL3-net-devel
+        - SDL3-ttf-devel
+        - wine
+        - zsh
+        - zsh-autosuggestions
+        - zsh-syntax-highlighting
     remove:
       packages:
-        # example: removing firefox (in favor of the flatpak)
-        # "firefox" is the main package, "firefox-langpacks" is a dependency
         - firefox
         - firefox-langpacks # also remove firefox dependency (not required for all packages, this is a special case)
 
@@ -38,13 +63,14 @@ modules:
         scope: system
         # If no repo information is specified, Flathub will be used by default
         install: # system flatpaks we want all users to have and not remove
+          - com.github.wwmm.easyeffects
           - org.keepassxc.KeePassXC
           - app.zen_browser.zen
           - org.libreoffice.LibreOffice
           - dev.vencord.Vesktop
           - com.heroicgameslauncher.hgl
-          #- org.mozilla.firefox
-          #- org.gnome.Loupe
+          - com.spotify.Client
+          - org.strawberrymusicplayer.Strawberry
       - scope: user # Also add Flathub user repo, but no user packages
 
   - type: signing # this sets up the proper policy & signing files for signed images to work fully
