@@ -17,9 +17,9 @@ modules:
       - source: system
         destination: / # copies files/system/* (* means everything inside it) into your image's root folder /
   
-  - type: script
-    scripts:
-      - vscode.sh # example: run files/scripts/myscript.sh
+  # - type: script
+  #   scripts:
+  #     - vscode.sh # example: run files/scripts/myscript.sh
   
   - type: dnf
     # repos:
@@ -28,7 +28,7 @@ modules:
     install:
       packages:
         - clang
-        - code
+        # - code
         - golang
         # - libasan
         # - libogg-devel
