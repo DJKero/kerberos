@@ -56,7 +56,7 @@ modules:
           - dev.vencord.Vesktop
           - com.heroicgameslauncher.hgl
           - com.spotify.Client
-          - org.strawberrymusicplayer.Strawberry
+          - org.strawberrymusicplayer.strawberry
       - scope: user # Also add Flathub user repo, but no user packages
 
   - type: signing # this sets up the proper policy & signing files for signed images to work fully
