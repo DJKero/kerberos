@@ -16,33 +16,18 @@ modules:
     files:
       - source: system
         destination: / # copies files/system/* (* means everything inside it) into your image's root folder /
-  
-  # - type: script
-  #   scripts:
-  #     - vscode.sh # example: run files/scripts/myscript.sh
-  
+
   - type: dnf
-    # repos:
-    #   copr:
-    #     - atim/starship
     install:
       packages:
         - clang
-        # - code
         - golang
-        # - libasan
-        # - libogg-devel
-        # - libusb-compat-0.1
         - lld
         - lldb
         - llvm
         - llvm-devel
-        # - mesa-libGLU
-        # - nodejs
         - oh-my-posh
         - postgresql-server
-        # - qt-creator
-        # - qt5-*-devel
         - wine
         - zsh
         - zsh-autosuggestions
@@ -54,12 +39,9 @@ modules:
 
   - type: rpm-ostree
     install:
-      packages:
-        - SDL3-devel
-        - SDL3_image-devel
-        # - SDL3_mixer-devel
-        # - SDL3_net-devel
-        - SDL3_ttf-devel
+      - SDL3-devel
+      - SDL3_image-devel
+      - SDL3_ttf-devel
 
   - type: default-flatpaks
     configurations:
