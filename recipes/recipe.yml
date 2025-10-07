@@ -27,6 +27,7 @@ modules:
         - llvm
         - llvm-devel
         - oh-my-posh
+        - postgresql-contrib
         - postgresql-server
         - wine
         - zsh
