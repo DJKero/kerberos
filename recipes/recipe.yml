@@ -43,11 +43,6 @@ modules:
         - postgresql-server
         # - qt-creator
         # - qt5-*-devel
-        - SDL3-devel
-        - SDL3-image-devel
-        - SDL3-mixer-devel
-        - SDL3-net-devel
-        - SDL3-ttf-devel
         - wine
         - zsh
         - zsh-autosuggestions
@@ -56,6 +51,15 @@ modules:
       packages:
         - firefox
         - firefox-langpacks # also remove firefox dependency (not required for all packages, this is a special case)
+
+  - type: rpm-ostree
+    install:
+      packages:
+        - SDL3-devel
+        - SDL3_image-devel
+        # - SDL3_mixer-devel
+        # - SDL3_net-devel
+        - SDL3_ttf-devel
 
   - type: default-flatpaks
     configurations:
